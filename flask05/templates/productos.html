@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Productos</h1>
+    <form action="/agregar" method="POST">
+        
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" id="precio"">
+        <input type="submit" value="Agregar">
+    <ul>
+    <!-- Iteramos sobre la lista de productos -->
+    {% for producto in productos %}
+        <!-- Tambien puede usarse la notación {{producto['nombre']}} -->
+        <li>{{producto.nombre}}: ${{producto.precio}}
+        <a href="/editar/{{producto.id}}">Editar</a>
+        <a href="/eliminar/{{producto.id}}" onclick="return confirm('Seguro que deseas eliminar')">Eliminar</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
