@@ -13,3 +13,6 @@
 [submodule "expressjs"]
 	path = expressjs
 	url = https://github.com/VictorMongeM/expressjs.git
+[submodule "SpringBoot"]
+	path = SpringBoot
+	url = https://github.com/VictorMongeM/SpringBoot.git
