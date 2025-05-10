@@ -19,3 +19,6 @@
 [submodule "react"]
 	path = react
 	url = https://github.com/VictorMongeM/react.git
+[submodule "mqtt"]
+	path = mqtt
+	url = https://github.com/VictorMongeM/mqtt.git
